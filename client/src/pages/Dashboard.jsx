@@ -118,7 +118,7 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Code2 className="text-blue-500" size={28} />
-            <span className="text-xl font-bold">CollabEditor</span>
+            <span className="text-xl font-bold">CodeSync</span>
           </div>
 
           <div className="flex items-center gap-4">

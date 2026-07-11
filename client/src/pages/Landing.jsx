@@ -219,7 +219,7 @@ const Landing = () => {
         <div className="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-2">
             <Code2 size={20} className="text-blue-500" />
-            <span className="font-semibold">CollabEditor</span>
+            <span className="font-semibold">CodeSync</span>
           </div>
           <p className="text-gray-500 text-sm">
             Built by Deepak Kumar • Real-Time Collaborative Code Editor

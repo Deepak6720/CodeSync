@@ -10,7 +10,7 @@ const PageLoader = () => {
           </div>
           <div className="absolute inset-0 rounded-2xl border-2 border-blue-500/30 border-t-blue-500 animate-spin"></div>
         </div>
-        <p className="text-gray-400 text-sm">Loading CollabEditor...</p>
+        <p className="text-gray-400 text-sm">Loading CodeSync...</p>
       </div>
     </div>
   )

@@ -37,7 +37,7 @@ const Register = () => {
 
         <div className="flex items-center justify-center gap-2 mb-8">
           <Code2 size={28} className="text-blue-500" />
-          <span className="text-xl font-bold text-white">CollabEditor</span>
+          <span className="text-xl font-bold text-white">CodeSync</span>
         </div>
 
         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">

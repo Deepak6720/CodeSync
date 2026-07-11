@@ -120,7 +120,7 @@ const Register = () => {
 
           <button
             type="button"
-            onClick={() => window.location.href = 'http://localhost:8000/auth/google'}
+            onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/auth/google`}
             className="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 rounded-xl transition-colors text-sm"
           >
             <svg width="18" height="18" viewBox="0 0 48 48">

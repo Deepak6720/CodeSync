@@ -19,7 +19,7 @@ const useYjs = (roomId, user) => {
     const ydoc = new Y.Doc()
     ydocRef.current = ydoc
 
-    const wsUrl = 'ws://localhost:8000'
+    const wsUrl = import.meta.env.VITE_WS_URL || 'ws://localhost:8000'
     const docName = `room-${roomId}`
 
     const provider = new WebsocketProvider(wsUrl, docName, ydoc)

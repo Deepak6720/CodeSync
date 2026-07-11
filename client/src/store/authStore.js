@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import axios from '../utils/axios'
-const API_URL = 'http://localhost:8000';
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
 const useAuthStore = create((set) => ({
   user: null,       
   token: localStorage.getItem('token') || null, 

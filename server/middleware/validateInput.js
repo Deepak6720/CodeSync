@@ -83,7 +83,6 @@ const executeSchema = z.object({
     .min(1, 'Language is required'),
 });
 
-// Usage: router.post('/register', validate(registerSchema), register)
 const validate = (schema) => (req, res, next) => {
   try {
     req.body = schema.parse(req.body);

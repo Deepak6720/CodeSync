@@ -44,7 +44,6 @@ const executeCode = async (req, res) => {
     const { output, statusCode, memory, cpuTime } = response.data;
     const isSuccess = statusCode === 200;
 
-    // Check if output contains common error patterns
     const hasError =
       output?.toLowerCase().includes("error") ||
       output?.toLowerCase().includes("exception") ||
@@ -63,8 +62,7 @@ const executeCode = async (req, res) => {
     });
   } catch (error) {
     console.error("Execute error:", error.response?.data || error.message);
-
-    // JDoodle credit limit exceeded
+    
     if (error.response?.status === 400) {
       const msg = error.response?.data?.error || "";
       if (msg.includes("credit")) {

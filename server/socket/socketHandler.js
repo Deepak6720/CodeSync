@@ -4,8 +4,6 @@ const initializeSocket = (io) => {
       console.log(`⚡ Socket connected: ${socket.id}`);
       socket.on('join-room', ({ roomId, user }) => {
         socket.join(roomId);
-        // Store user info on the socket object itself
-        // We need this when they disconnect (no data sent on disconnect)
         socket.roomId = roomId;
         socket.user = user;
   
@@ -29,7 +27,6 @@ const initializeSocket = (io) => {
       });
 
     socket.on('send-chat-message', async ({ roomId, message }) => {
-        // tempId = a temporary client-side ID used to avoid duplicate display
         const savedMessage = await saveMessage({
           roomId,
           senderId: message.senderId,

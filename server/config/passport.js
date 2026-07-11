@@ -7,7 +7,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:8000/auth/google/callback',
+      callbackURL: process.env.NODE_ENV === 'production'?`${process.env.BACKEND_URL}/auth/google/callback`:'http://localhost:8000/auth/google/callback',
     },
 
     async (accessToken, refreshToken, profile, done) => {
@@ -33,7 +33,6 @@ passport.use(
           googleId: profile.id,
           name: profile.displayName,
           email: profile.emails[0].value,
-          // Use Google's profile picture as avatar
           avatar: profile.photos[0].value,
           authProvider: 'google',
         });

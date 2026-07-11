@@ -4,6 +4,25 @@ services:
     env: node
     buildCommand: npm install
     startCommand: npm start
+
     envVars:
       - key: NODE_ENV
         value: production
+
+      - key: BACKEND_URL
+        value: https://codesync-5vs9.onrender.com
+
+      - key: CLIENT_URL
+        value: https://codesync-lyart.vercel.app
+
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+
+      - key: JWT_SECRET
+        sync: false
+
+      - key: MONGO_URI
+        sync: false
